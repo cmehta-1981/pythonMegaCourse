@@ -1,0 +1,11 @@
+how to find builtin functions
+
+1. open python console
+2. type dir(str) , str is data type in which trying to get string function list , then displays the funtiona
+3. type help('hello'.upper())
+
+
+builtins function list
+
+import builtins in python console
+dir(builtins) , displays all python builtin functions
