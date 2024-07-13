@@ -1,5 +1,5 @@
 '''
-removing the extra one line between the two line , improving the for loop using strip in show case
+removing the extra one line between the two line , improving the for loop using strip in showcase
 1-Python is great
 
 2-I Love Python
