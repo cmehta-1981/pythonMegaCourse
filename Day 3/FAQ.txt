@@ -1,0 +1,9 @@
+Q1: The user is adding to-do items, but if we close the program, the previous to-do items are lost. How can we store the to-do items permanently?
+
+A: The to-do items are lost every time we close the program because we currently store them as strings and lists. We need to store the to-do items in external files or databases and instruct the program to automatically access them. This is a feature we will add in the coming days, so stay tuned!
+
+Q2: How often does Python computer execute the print function in the example below?
+
+while True:
+    print("Hello")
+A: The print function will be executed every few milliseconds or so. The exact interval depends on the processor speed of your computer.

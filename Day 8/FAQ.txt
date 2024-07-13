@@ -1,0 +1,5 @@
+Q1: I am still confused about when I should use a for-loop and when a list comprehension.
+
+A: First of all, it should be clear that there is nothing that a list comprehension does that a for-loop doesn't. The opposite is not true meaning in certain cases the for-loop is the only way around.
+
+The rule of thumb is if you can do something with a list comprehension, do it as it is less code than a for-loop.

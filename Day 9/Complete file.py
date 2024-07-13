@@ -1,0 +1,69 @@
+'''
+removing the extra one line between the two line , improving the for loop using strip in show case
+1-Python is great
+
+2-I Love Python
+
+'''
+
+while True:
+    user_action = input("Type add , show , edit , complete or exit:- ")
+    user_action = user_action.strip()
+
+    match user_action:
+        case "add":
+            todo = input("Enter the to do:- ") + '\n'
+            with open('todo.txt', 'r') as file:
+                todos = file.readlines()
+
+            todos.append(todo)
+
+            with open('todo.txt', 'w') as file:
+                file.writelines(todos)
+
+        case "show":
+            with open('todo.txt', 'r') as file:
+                todos = file.readlines()
+
+            new_todos = [item.strip() for item in todos]  # using list comprehensions
+
+            for index, item in enumerate(new_todos):
+                row = f"{index + 1}-{item}"
+                print(row)
+
+        case 'edit':
+            number = int(input("number of todo to edit: -"))
+            number = number - 1
+
+            with open('todo.txt', 'r') as file:
+                todos = file.readlines()
+
+            new_todo = input("Enter new todo:- ")
+            todos[number] = new_todo + '\n'
+
+            print(todos)
+
+            with open('todo.txt', 'w') as file:
+                file.writelines(todos)
+
+        case 'complete':
+
+            number = int(input('Enter the number to remove from file'))
+
+            with open('todo.txt', 'r') as file:
+                todos = file.readlines()
+            index = number - 1
+            remove_from_todo = todos[index].strip() + '\n'
+
+            todos.pop(index)
+
+            with open('todo.txt', 'w') as file:
+                file.writelines(todos)
+
+            message  = f"Todo {remove_from_todo} was removed from file "
+            print(message)
+
+        case 'exit':
+            print('exit from program')
+            break
+print("bye... bye")
